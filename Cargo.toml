@@ -3,10 +3,16 @@ name = "penguin"
 version = "0.1.0"
 edition = "2021"
 authors = ["Ismael Sh <me@theiskaa.com>"]
-description = "Generate and explore passwords from personal details"
+description = "Generate strong memorable passwords and password lists from provided words"
 readme = "README.md"
 license = "MIT"
-keywords = ["password", "password-generator", "possible-passwords", "generate-password"]
+keywords = [
+    "password",
+    "password-generator",
+    "possible-passwords",
+    "generate-password",
+    "password-list-generator",
+]
 repository = "https://github.com/theiskaa/penguin"
 
 [lib]
@@ -18,6 +24,7 @@ name = "penguin"
 path = "src/bin/main.rs"
 
 [dependencies]
+clap = { version = "4.5.23", features = ["derive"] }
 rand = "0.8.5"
 
 [profile.release]

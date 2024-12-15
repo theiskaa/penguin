@@ -1,0 +1,25 @@
+[package]
+name = "penguin"
+version = "0.1.0"
+edition = "2021"
+authors = ["Ismael Sh <me@theiskaa.com>"]
+description = "Generate and explore passwords from personal details"
+readme = "README.md"
+license = "MIT"
+keywords = ["password", "password-generator", "possible-passwords", "generate-password"]
+repository = "https://github.com/theiskaa/penguin"
+
+[lib]
+name = "penguin"
+path = "src/lib/lib.rs"
+
+[[bin]]
+name = "penguin"
+path = "src/bin/main.rs"
+
+[dependencies]
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = true

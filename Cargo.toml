@@ -18,6 +18,7 @@ name = "penguin"
 path = "src/bin/main.rs"
 
 [dependencies]
+rand = "0.8.5"
 
 [profile.release]
 lto = "thin"
